@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "postinstall": "cd ./node_modules/protractor && npm i webdriver-manager@latest",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -43,7 +42,6 @@
     "karma-jasmine": "^3.3.1",
     "karma-jasmine-html-reporter": "^1.5.4",
     "popper.js": "^1.16.1",
-    "protractor": "^7.0.0",
     "ts-node": "^3.2.1",
     "tslib": "^1.13.0",
     "tslint": "^6.1.2",
