@@ -1,4 +1,4 @@
-[<img src="https://github.com/soerenehm/angular9-crud-projects/workflows/build/badge.svg" alt="build_status" width="200"/>](https://github.com/soerenehm/angular9-crud-projects/actions)
+[<img src="https://github.com/soerenehm/angular-crud-projects/workflows/build/badge.svg" alt="build_status" width="200"/>](https://github.com/soerenehm/angular-crud-projects/actions)
 
 # CRUD Application for Project Administration.
 

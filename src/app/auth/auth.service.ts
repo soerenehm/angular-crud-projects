@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
 import {map} from 'rxjs/operators';
 
-import {uuid} from 'uuidv4';
+import {v4 as uuid} from 'uuid';
 import {User} from './user.model';
 
 @Injectable({providedIn: 'root'})

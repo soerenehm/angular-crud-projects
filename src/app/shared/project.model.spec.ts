@@ -1,7 +1,7 @@
 import {of} from 'rxjs';
 
 import {ProjectService} from './project.service';
-import {Projects} from '@angular/cli/lib/config/schema';
+import {Projects} from '@angular/cli/lib/config/workspace-schema';
 
 
 describe('ProjectService', () => {
