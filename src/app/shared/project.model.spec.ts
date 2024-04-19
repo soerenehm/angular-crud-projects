@@ -28,6 +28,6 @@ describe('ProjectService', () => {
     httpClientSpy.get.and.returnValue(of(expectedProjects));
 
     expect(JSON.stringify(projectSerice.getProjects())).toEqual(JSON.stringify(expectedProjects));
-    expect(httpClientSpy.get.calls.count()).toBe(1, 'one call');
+    expect(httpClientSpy.get.calls.count()).toBe(1);
   });
 });
