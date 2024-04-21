@@ -26,32 +26,34 @@ export class AuthService {
   }
 
   signUp(email: string, password: string) {
-    this.getUser(email).subscribe(
-      (response: User[]) => {
+    this.getUser(email).subscribe({
+      next: (response: User[]) => {
         if (response.length > 0) {
           this.errorOccurred.next('User already exists. Sign in!');
         } else {
           const url = 'http://localhost/users';
-          const encodedPassword = btoa(password); // Fake encryption
-          this.httpClient.post<User>(url, {id: null, email: email, password: encodedPassword}, this.httpOptions).subscribe(
-            (user: User) => {
+          const encodedPassword = window.btoa(password); // Fake encryption
+          this.httpClient.post<User>(url, {id: null, email: email, password: encodedPassword}, this.httpOptions).subscribe({
+            next: (user: User) => {
               this.userChanged.next(user);
               this.userChangedLast.next(user);
               AuthService.storeUser(user);
             },
-            err => {
+            error: (err) => {
               this.handleError(err);
-            });
+            }
+          });
         }
       },
-      err => {
+      error: (err) => {
         this.handleError(err);
-      });
+      }
+    });
   }
 
   signIn(email: string, password: string) {
-    this.getUser(email).subscribe(
-      (response: User[]) => {
+    this.getUser(email).subscribe({
+      next: (response: User[]) => {
         if (response.length > 0) {
           const user = response.pop();
           if (!this.checkPassword(user.password, password)) {
@@ -65,9 +67,10 @@ export class AuthService {
           this.errorOccurred.next('User not found. Sign up!');
         }
       },
-      err => {
+      error: (err) => {
         this.handleError(err);
-      });
+      }
+    });
   }
 
   logout() {
@@ -86,7 +89,7 @@ export class AuthService {
   }
 
   checkPassword(password: string, input: string) {
-    return atob(password) === input;
+    return window.atob(password) === input;
   }
 
   isAuthorized() {
