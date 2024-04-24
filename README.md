@@ -1,5 +1,3 @@
-[<img src="https://github.com/soerenehm/angular-crud-projects/workflows/build/badge.svg" alt="build_status" width="200"/>](https://github.com/soerenehm/angular-crud-projects/actions)
-
 # CRUD Application for Project Administration.
 
 Angular 17 Project to create, read, update and delete IT projects.
