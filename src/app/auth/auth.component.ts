@@ -17,7 +17,7 @@ export class AuthComponent implements OnInit, OnDestroy {
     'password': new FormControl(null, Validators.required)
   });
   isSignInMode = true;
-  errorMessage: String = null;
+  errorMessage: string = null;
   errorSubscription: Subscription;
   userSubscription: Subscription;
 
@@ -27,7 +27,7 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.userSubscription = this.authService.userChanged.subscribe((user) => {
-      if (!!user) {
+      if (user) {
         this.router.navigateByUrl('project-list');
       } else {
         this.router.navigateByUrl('');

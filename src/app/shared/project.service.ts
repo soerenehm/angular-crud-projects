@@ -47,7 +47,7 @@ export class ProjectService {
   deleteProject(index: number): void {
     const url = 'http://localhost/projects/' + this.projects[index]['id'];
 
-    this.httpClient.delete<{}>(url, this.httpOptions).subscribe({
+    this.httpClient.delete<object>(url, this.httpOptions).subscribe({
       next: () => {
         this.projects.splice(index, 1);
         this.projectsChanged.next(this.projects.slice());

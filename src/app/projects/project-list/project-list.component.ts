@@ -16,7 +16,7 @@ export class ProjectListComponent implements OnInit, OnDestroy {
   projectsSubscription: Subscription;
   errorSubscription: Subscription;
   selectedIndex: number;
-  errorMessage: String = null;
+  errorMessage: string = null;
 
   constructor(private projectService: ProjectService) {
   }
