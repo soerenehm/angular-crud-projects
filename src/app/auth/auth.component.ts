@@ -28,9 +28,9 @@ export class AuthComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.userSubscription = this.authService.userChanged.subscribe((user) => {
       if (user) {
-        this.router.navigateByUrl('project-list');
+        void this.router.navigateByUrl('project-list');
       } else {
-        this.router.navigateByUrl('');
+        void this.router.navigateByUrl('');
       }
     });
     this.errorSubscription = this.authService.errorOccurred.subscribe((err: any) => {

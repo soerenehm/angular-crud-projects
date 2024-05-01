@@ -76,7 +76,7 @@ export class AuthService {
   logout() {
     this.userChanged.next(null);
     localStorage.removeItem('user');
-    this.router.navigateByUrl('auth');
+    void this.router.navigateByUrl('auth');
   }
 
   getUser(email: string): Observable<User[]> {
