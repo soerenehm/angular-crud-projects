@@ -32,7 +32,7 @@ start() {
 }
 
 cleanup() {
-  if [[ ! -z $(docker ps | grep "${CONTAINER_NAME}") ]]; then
+  if [[ -n $(docker ps | grep "${CONTAINER_NAME}") ]]; then
     echo "Stop docker container"
     docker stop -t 5 "${CONTAINER_NAME}"
   fi
