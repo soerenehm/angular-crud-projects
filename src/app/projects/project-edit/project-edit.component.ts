@@ -6,9 +6,10 @@ import {EditMode} from '../../shared/editmode.model';
 import {Project} from '../../shared/project.model';
 
 @Component({
-  selector: 'app-project-edit',
-  templateUrl: './project-edit.component.html',
-  styleUrls: ['./project-edit.component.css']
+    selector: 'app-project-edit',
+    templateUrl: './project-edit.component.html',
+    styleUrls: ['./project-edit.component.css'],
+    standalone: false
 })
 export class ProjectEditComponent implements OnInit, OnChanges {
   projectForm: FormGroup = new FormGroup({

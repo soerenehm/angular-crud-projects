@@ -6,9 +6,10 @@ import {Project} from '../../shared/project.model';
 import {EditMode} from '../../shared/editmode.model';
 
 @Component({
-  selector: 'app-project-list',
-  templateUrl: './project-list.component.html',
-  styleUrls: ['./project-list.component.css']
+    selector: 'app-project-list',
+    templateUrl: './project-list.component.html',
+    styleUrls: ['./project-list.component.css'],
+    standalone: false
 })
 export class ProjectListComponent implements OnInit, OnDestroy {
   projects: Project[];
