@@ -1,6 +1,6 @@
 # CRUD Application for Project Administration.
 
-Angular 19 Project to create, read, update and delete IT projects.
+Angular 20 Project to create, read, update and delete IT projects.
 
 Changes beside of given projects in db.json are only temporarily.
 

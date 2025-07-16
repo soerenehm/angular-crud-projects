@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "externalDependencies":[""],
             "outputPath": "dist/angular-crud-projects",
             "index": "src/index.html",
             "browser": "src/main.ts",
