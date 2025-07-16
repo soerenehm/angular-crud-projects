@@ -12,6 +12,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "zone.js/node": ["node_modules/zone.js/dist/zone-node.js"]
+    },
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
