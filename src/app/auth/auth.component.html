@@ -1,9 +1,11 @@
 <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
   <div class="col-md-3 offset-md-3">
-    <div *ngIf="errorMessage" class="alert alert-danger">
-      <p>{{ errorMessage }}</p>
-      <button class="btn btn-danger" type="button" (click)="onClearErrorMessage()">Close</button>
-    </div>
+    @if (errorMessage) {
+      <div class="alert alert-danger">
+        <p>{{ errorMessage }}</p>
+        <button class="btn btn-danger" type="button" (click)="onClearErrorMessage()">Close</button>
+      </div>
+    }
     <div class="form-group">
       <label class="col-form-label">E-Mail
         <input
